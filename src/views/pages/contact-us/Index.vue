@@ -1,0 +1,24 @@
+<script>
+// Extensions
+  import View from '@/views/View'
+
+  // Mixins
+  import LoadSections from '@/core/mixins/load-sections'
+
+  export default {
+    name: 'ContactUs',
+
+    metaInfo: { title: 'Contact Us' },
+
+    extends: View,
+
+    mixins: [LoadSections(['hero-alt', 'keep-in-touch'])],
+
+    props: {
+      id: {
+        type: String,
+        default: 'about',
+      },
+    },
+  }
+</script>
