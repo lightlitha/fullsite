@@ -42,6 +42,16 @@ const routes = [
         component: () => import('@/views/pages/verify-email/Index.vue'),
       },
       {
+        path: 'password/reset',
+        name: 'RecoverPassword',
+        component: () => import('@/views/pages/password/Forgot.vue'),
+      },
+      {
+        path: 'tnc',
+        name: 'TAndC',
+        component: () => import('@/views/pages/tandc/Index.vue'),
+      },
+      {
         path: '*',
         name: 'FourOhFour',
         component: () => import('@/views/pages/404/Index.vue'),

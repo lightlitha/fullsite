@@ -27,7 +27,7 @@
             <base-btn
               :block="$vuetify.breakpoint.smAndDown"
               color="white"
-              href="mailto:shop@vuetifyjs.com?subject=Zero%20Theme%20Question"
+              href="mailto:enquiry@phiscus.co.za?subject=Phiscus%20Services%20Question"
               large
               outlined
               target="_blank"
