@@ -51,12 +51,34 @@ const routes = [
         name: 'TAndC',
         component: () => import('@/views/pages/tandc/Index.vue'),
       },
+    ],
+  },
+  {
+    path: '/a',
+    component: () => import('@/views/layouts/dashboard/Index.vue'),
+    redirect: '/a/dashboard',
+    children: [
       {
-        path: '*',
-        name: 'FourOhFour',
-        component: () => import('@/views/pages/404/Index.vue'),
+        path: 'dashboard',
+        name: 'Dashboard',
+        component: () => import('@/views/pages/dashboard/Index.vue'),
+      },
+      {
+        path: 'orders',
+        name: 'Orders',
+        component: () => import('@/views/pages/orders/Browse.vue'),
+      },
+      {
+        path: 'orders/{id}',
+        name: 'OrderRead',
+        component: () => import('@/views/pages/orders/Read.vue'),
       },
     ],
+  },
+  {
+    path: '*',
+    name: 'FourOhFour',
+    component: () => import('@/views/pages/404/Index.vue'),
   },
 ]
 

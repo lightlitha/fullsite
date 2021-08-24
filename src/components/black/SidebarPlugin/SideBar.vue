@@ -14,7 +14,6 @@
     >
       <div class="logo">
         <a
-          href="http://www.creative-tim.com"
           aria-label="sidebar mini logo"
           class="simple-text logo-mini"
         >
@@ -29,7 +28,6 @@
           </div>
         </a>
         <a
-          href="http://www.creative-tim.com"
           class="simple-text logo-normal"
         >
           {{ title }}
@@ -61,11 +59,11 @@
     props: {
       title: {
         type: String,
-        default: 'Creative Tim',
+        default: 'Phiscus',
       },
       backgroundColor: {
         type: String,
-        default: 'vue',
+        default: 'white',
       },
       activeColor: {
         type: String,
