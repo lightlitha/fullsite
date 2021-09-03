@@ -25,7 +25,7 @@ export function RefundBrowse () {
   return refunds
 }
 
-export function RefundRaed () {
+export function RefundRead () {
   const refunds = []
   const currency = CurrentCurrency()
   for (let i = 0; i < 1; i++) {

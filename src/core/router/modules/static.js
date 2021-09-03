@@ -73,6 +73,36 @@ const routes = [
         name: 'OrderRead',
         component: () => import('@/views/pages/orders/Read.vue'),
       },
+      {
+        path: 'shipments',
+        name: 'Shipments',
+        component: () => import('@/views/pages/shipments/Browse.vue'),
+      },
+      {
+        path: 'shipments/{id}',
+        name: 'ShipmentRead',
+        component: () => import('@/views/pages/shipments/Read.vue'),
+      },
+      {
+        path: 'invoices',
+        name: 'Invoices',
+        component: () => import('@/views/pages/invoices/Browse.vue'),
+      },
+      {
+        path: 'invoices/{id}',
+        name: 'InvoiceRead',
+        component: () => import('@/views/pages/invoices/Read.vue'),
+      },
+      {
+        path: 'refunds',
+        name: 'Refunds',
+        component: () => import('@/views/pages/refunds/Browse.vue'),
+      },
+      {
+        path: 'refunds/{id}',
+        name: 'RefundRead',
+        component: () => import('@/views/pages/refunds/Read.vue'),
+      },
     ],
   },
   {

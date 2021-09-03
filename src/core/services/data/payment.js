@@ -9,6 +9,12 @@ export function PaymentBrowse () {
     {
       name: 'Crypto',
     },
+    {
+      name: 'Cash',
+    },
+    {
+      name: 'Cash On Delivery',
+    },
   ]
 }
 

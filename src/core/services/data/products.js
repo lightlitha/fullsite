@@ -13,6 +13,7 @@ export function ProductsOrdered () {
         ' ' +
         Math.floor(Math.random() * (1000 - 100 + 1) + 100),
       status: 'invoiced(1) ordered(1)',
+      qty: Math.floor(Math.random() * (5 - 1 + 1) + 1),
       subtotal:
         currency.symbol +
         ' ' +
