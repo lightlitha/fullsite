@@ -103,6 +103,66 @@ const routes = [
         name: 'RefundRead',
         component: () => import('@/views/pages/refunds/Read.vue'),
       },
+      {
+        path: 'products',
+        name: 'Products',
+        component: () => import('@/views/pages/products/Browse.vue'),
+      },
+      {
+        path: 'products/{id}',
+        name: 'ProductRead',
+        component: () => import('@/views/pages/products/Read.vue'),
+      },
+      {
+        path: 'products/add',
+        name: 'ProductAdd',
+        component: () => import('@/views/pages/products/Add.vue'),
+      },
+      {
+        path: 'category',
+        name: 'Category',
+        component: () => import('@/views/pages/category/Browse.vue'),
+      },
+      {
+        path: 'category/{id}',
+        name: 'CategoryRead',
+        component: () => import('@/views/pages/category/Read.vue'),
+      },
+      {
+        path: 'category/add',
+        name: 'CategoryAdd',
+        component: () => import('@/views/pages/category/Add.vue'),
+      },
+      {
+        path: 'attribute',
+        name: 'attributes',
+        component: () => import('@/views/pages/attributes/Browse.vue'),
+      },
+      {
+        path: 'attribute/{id}',
+        name: 'AttributeRead',
+        component: () => import('@/views/pages/attributes/Read.vue'),
+      },
+      {
+        path: 'attribute/add',
+        name: 'AttributeAdd',
+        component: () => import('@/views/pages/attributes/Add.vue'),
+      },
+      {
+        path: 'attribute_family',
+        name: 'Families',
+        component: () => import('@/views/pages/families/Browse.vue'),
+      },
+      {
+        path: 'attribute_family/{id}',
+        name: 'FamilyRead',
+        component: () => import('@/views/pages/families/Read.vue'),
+      },
+      {
+        path: 'attribute_family/add',
+        name: 'FamilyAdd',
+        component: () => import('@/views/pages/families/Add.vue'),
+      },
     ],
   },
   {

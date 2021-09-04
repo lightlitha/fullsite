@@ -106,6 +106,32 @@
           ],
         },
         {
+          name: 'Catalog',
+          icon: 'mdi mdi-newspaper-variant',
+          children: [
+            {
+              url: '/a/products',
+              name: 'Products',
+              icon: 'mdi mdi-fruit-grapes',
+            },
+            {
+              url: '/a/category',
+              name: 'Category',
+              icon: 'mdi mdi-rhombus-split',
+            },
+            {
+              url: '/a/attribute',
+              name: 'Attribute',
+              icon: 'mdi mdi-dna',
+            },
+            {
+              url: '/a/attribute_family',
+              name: 'Attribute Family',
+              icon: 'mdi mdi-family-tree',
+            },
+          ],
+        },
+        {
           url: '/maps',
           name: 'Maps',
           icon: 'tim-icons icon-pin',

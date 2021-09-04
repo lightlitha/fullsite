@@ -1,5 +1,44 @@
 import { CurrentCurrency } from './currency'
 import { randomCharacters, getRandomInt } from '@/core/utils/misc'
+import { Products } from './faker'
+
+export function ProductBrowse () {
+  const products = []
+  const currency = CurrentCurrency()
+  for (let i = 0; i < Products.length; i++) {
+    products.push({
+      product_no: '#00' + Products[i].id,
+      sku: randomCharacters(5),
+      name: Products[i].name,
+      attribute_family: 'Default',
+      type: ProductType()[getRandomInt(1, 4)].name,
+      status: 'Active',
+      qty: getRandomInt(0, 100),
+      price: currency.symbol + ' ' + Products[i].price,
+    })
+  }
+  return products
+}
+
+export function ProductType () {
+  return [
+    {
+      name: 'Simple',
+    },
+    {
+      name: 'Booking',
+    },
+    {
+      name: 'Virtual',
+    },
+    {
+      name: 'Download',
+    },
+    {
+      name: 'Rental',
+    },
+  ]
+}
 
 export function ProductsOrdered () {
   const products = []
