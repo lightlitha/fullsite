@@ -163,6 +163,51 @@ const routes = [
         name: 'FamilyAdd',
         component: () => import('@/views/pages/families/Add.vue'),
       },
+      {
+        path: 'customer',
+        name: 'Customers',
+        component: () => import('@/views/pages/customer/Browse.vue'),
+      },
+      {
+        path: 'costomer/{id}',
+        name: 'CustomerRead',
+        component: () => import('@/views/pages/customer/Read.vue'),
+      },
+      {
+        path: 'customer/add',
+        name: 'CustomerAdd',
+        component: () => import('@/views/pages/customer/Add.vue'),
+      },
+      {
+        path: 'groups',
+        name: 'Groups',
+        component: () => import('@/views/pages/group/Browse.vue'),
+      },
+      {
+        path: 'groups/{id}',
+        name: 'GroupRead',
+        component: () => import('@/views/pages/group/Read.vue'),
+      },
+      {
+        path: 'groups/add',
+        name: 'GroupAdd',
+        component: () => import('@/views/pages/group/Add.vue'),
+      },
+      {
+        path: 'review',
+        name: 'Reviews',
+        component: () => import('@/views/pages/review/Browse.vue'),
+      },
+      {
+        path: 'review/{id}',
+        name: 'ReviewRead',
+        component: () => import('@/views/pages/review/Read.vue'),
+      },
+      {
+        path: 'review/add',
+        name: 'ReviewAdd',
+        component: () => import('@/views/pages/review/Add.vue'),
+      },
     ],
   },
   {

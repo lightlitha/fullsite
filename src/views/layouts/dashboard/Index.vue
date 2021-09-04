@@ -132,6 +132,27 @@
           ],
         },
         {
+          name: 'Customer',
+          icon: 'mdi mdi-face-woman-outline',
+          children: [
+            {
+              url: '/a/customer',
+              name: 'Customers',
+              icon: 'mdi mdi-face-woman-outline',
+            },
+            {
+              url: '/a/groups',
+              name: 'Groups',
+              icon: 'mdi mdi-account-group',
+            },
+            {
+              url: '/a/review',
+              name: 'Reviews',
+              icon: 'mdi mdi-message',
+            },
+          ],
+        },
+        {
           url: '/maps',
           name: 'Maps',
           icon: 'tim-icons icon-pin',
