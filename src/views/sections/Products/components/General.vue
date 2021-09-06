@@ -9,7 +9,7 @@
     >
       <validation-provider
         v-slot="{ errors }"
-        name="Name"
+        name="name"
         rules="required|min:3|max:33"
       >
         <v-text-field
@@ -23,7 +23,7 @@
 
       <validation-provider
         v-slot="{ errors }"
-        name="SKU"
+        name="sku"
         rules="required|min:3|max:13"
       >
         <v-text-field
@@ -37,7 +37,7 @@
 
       <validation-provider
         v-slot="{ errors }"
-        name="Barcode"
+        name="barcode"
         rules="required|min:12|max:13"
       >
         <v-text-field
@@ -49,60 +49,26 @@
         />
       </validation-provider>
 
-      <validation-provider>
-        <v-combobox
+      <validation-provider name="tax">
+        <v-select
           v-model="product.tax"
           :items="taxes"
+          chips
           label="Product Item Tax"
           multiple
-          chips
           outlined
-        >
-          <template v-slot:selection="data">
-            <v-chip
-              :key="JSON.stringify(data.item)"
-              v-bind="data.attrs"
-              :input-value="data.selected"
-              :disabled="data.disabled"
-              @click:close="data.parent.selectItem(data.item)"
-            >
-              <v-avatar
-                class="accent white--text"
-                left
-                v-text="data.item.slice(0, 1).toUpperCase()"
-              />
-              {{ data.item }}
-            </v-chip>
-          </template>
-        </v-combobox>
+        />
       </validation-provider>
 
-      <validation-provider>
-        <v-combobox
+      <validation-provider name="tags">
+        <v-select
           v-model="product.tags"
           :items="tags"
           label="Tags"
           multiple
           chips
           outlined
-        >
-          <template v-slot:selection="data">
-            <v-chip
-              :key="JSON.stringify(data.item)"
-              v-bind="data.attrs"
-              :input-value="data.selected"
-              :disabled="data.disabled"
-              @click:close="data.parent.selectItem(data.item)"
-            >
-              <v-avatar
-                class="accent white--text"
-                left
-                v-text="data.item.slice(0, 1).toUpperCase()"
-              />
-              {{ data.item }}
-            </v-chip>
-          </template>
-        </v-combobox>
+        />
       </validation-provider>
 
       <v-btn

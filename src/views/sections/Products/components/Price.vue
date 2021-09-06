@@ -54,49 +54,11 @@
           cols="12"
           md="6"
         >
-          <validation-provider>
-            <v-menu
-              ref="menufrom"
-              v-model="menu_spf"
-              :close-on-content-click="false"
-              :return-value.sync="product.special_price_from"
-              transition="scale-transition"
-              offset-y
-              min-width="auto"
-            >
-              <template v-slot:activator="{ on, attrs }">
-                <v-text-field
-                  v-model="product.special_price_from"
-                  label="Special Price From"
-                  prepend-icon="mdi-calendar"
-                  readonly
-                  v-bind="attrs"
-                  outlined
-                  v-on="on"
-                />
-              </template>
-              <v-date-picker
-                v-model="product.special_price_from"
-                no-title
-                scrollable
-              >
-                <v-spacer />
-                <v-btn
-                  text
-                  color="primary"
-                  @click="menu_spf = false"
-                >
-                  Cancel
-                </v-btn>
-                <v-btn
-                  text
-                  color="primary"
-                  @click="$refs.menufrom.save(product.special_price_from)"
-                >
-                  OK
-                </v-btn>
-              </v-date-picker>
-            </v-menu>
+          <validation-provider name="special_from_price">
+            <lalitha-date-picker
+              v-model="product.special_price_from"
+              label="Special Price From"
+            />
           </validation-provider>
         </v-col>
         <v-col
@@ -104,38 +66,10 @@
           md="6"
         >
           <validation-provider>
-            <v-menu
-              ref="menufromtime"
-              v-model="menu_spft"
-              :close-on-content-click="false"
-              :nudge-right="40"
-              :return-value.sync="product.special_price_from_time"
-              transition="scale-transition"
-              offset-y
-              max-width="290px"
-              min-width="290px"
-            >
-              <template v-slot:activator="{ on, attrs }">
-                <v-text-field
-                  v-model="product.special_price_from_time"
-                  label="Special Price Start Time"
-                  prepend-icon="mdi-clock-time-four-outline"
-                  readonly
-                  v-bind="attrs"
-                  outlined
-                  v-on="on"
-                />
-              </template>
-              <v-time-picker
-                v-if="menu_spft"
-                v-model="product.special_price_from_time"
-                format="24hr"
-                full-width
-                @click:minute="
-                  $refs.menufromtime.save(product.special_price_from_time)
-                "
-              />
-            </v-menu>
+            <lalitha-time-picker
+              v-model="product.special_price_from_time"
+              label="Special Price Start Time"
+            />
           </validation-provider>
         </v-col>
 
@@ -144,48 +78,10 @@
           md="6"
         >
           <validation-provider>
-            <v-menu
-              ref="menuto"
-              v-model="menu_spt"
-              :close-on-content-click="false"
-              :return-value.sync="product.special_price_to"
-              transition="scale-transition"
-              offset-y
-              min-width="auto"
-            >
-              <template v-slot:activator="{ on, attrs }">
-                <v-text-field
-                  v-model="product.special_price_to"
-                  label="Special Price To"
-                  prepend-icon="mdi-calendar"
-                  readonly
-                  v-bind="attrs"
-                  outlined
-                  v-on="on"
-                />
-              </template>
-              <v-date-picker
-                v-model="product.special_price_to"
-                no-title
-                scrollable
-              >
-                <v-spacer />
-                <v-btn
-                  text
-                  color="primary"
-                  @click="menu_spt = false"
-                >
-                  Cancel
-                </v-btn>
-                <v-btn
-                  text
-                  color="primary"
-                  @click="$refs.menuto.save(product.special_price_to)"
-                >
-                  OK
-                </v-btn>
-              </v-date-picker>
-            </v-menu>
+            <lalitha-date-picker
+              v-model="product.special_price_to"
+              label="Special Price To"
+            />
           </validation-provider>
         </v-col>
         <v-col
@@ -193,38 +89,10 @@
           md="6"
         >
           <validation-provider>
-            <v-menu
-              ref="menutotime"
-              v-model="menu_sptt"
-              :close-on-content-click="false"
-              :nudge-right="40"
-              :return-value.sync="product.special_price_to_time"
-              transition="scale-transition"
-              offset-y
-              max-width="290px"
-              min-width="290px"
-            >
-              <template v-slot:activator="{ on, attrs }">
-                <v-text-field
-                  v-model="product.special_price_to_time"
-                  label="Special Price End Time"
-                  prepend-icon="mdi-clock-time-four-outline"
-                  readonly
-                  v-bind="attrs"
-                  outlined
-                  v-on="on"
-                />
-              </template>
-              <v-time-picker
-                v-if="menu_sptt"
-                v-model="product.special_price_to_time"
-                format="24hr"
-                full-width
-                @click:minute="
-                  $refs.menutotime.save(product.special_price_to_time)
-                "
-              />
-            </v-menu>
+            <lalitha-time-picker
+              v-model="product.special_price_to_time"
+              label="Special Price End Time"
+            />
           </validation-provider>
         </v-col>
       </v-row>
@@ -242,32 +110,15 @@
           cols="12"
           md="4"
         >
-          <validation-provider>
-            <v-combobox
+          <validation-provider name="customergroup">
+            <v-select
               v-model="product.customers.groups"
               :items="customer_groups"
+              chips
               label="Customer Group"
               multiple
-              chips
               outlined
-            >
-              <template v-slot:selection="data">
-                <v-chip
-                  :key="JSON.stringify(data.item)"
-                  v-bind="data.attrs"
-                  :input-value="data.selected"
-                  :disabled="data.disabled"
-                  @click:close="data.parent.selectItem(data.item)"
-                >
-                  <v-avatar
-                    class="accent white--text"
-                    left
-                    v-text="data.item.slice(0, 1).toUpperCase()"
-                  />
-                  {{ data.item }}
-                </v-chip>
-              </template>
-            </v-combobox>
+            />
           </validation-provider>
         </v-col>
         <v-col
@@ -323,6 +174,7 @@
 </template>
 
 <script>
+  import { LalithaDatePicker, LalithaTimePicker } from '@/components/lalitha'
   import { required, min, max } from 'vee-validate/dist/rules'
   import { extend, ValidationObserver, ValidationProvider } from 'vee-validate'
 
@@ -346,6 +198,8 @@
     components: {
       ValidationProvider,
       ValidationObserver,
+      LalithaDatePicker,
+      LalithaTimePicker,
     },
     data: () => ({
       product: {
@@ -374,10 +228,6 @@
         'Titanium',
         'Vibranium',
       ],
-      menu_spf: false,
-      menu_spt: false,
-      menu_spft: false,
-      menu_sptt: false,
     }),
 
     methods: {

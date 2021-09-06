@@ -5681,6 +5681,49 @@ const Reviews = [
   },
 ]
 
+const Catalog = [
+  {
+    id: '1',
+    name: 'Some Name',
+    description: '',
+    is_active: true,
+    channels: ['default'],
+    customer_groups: ['wholesale'],
+    start_date: '10-10-2021',
+    end_date: '10-11-2021',
+    priority: '1',
+    conditions: [],
+    action_type: 'percentage_of_price',
+    discount_amount: 0,
+    end_other_rules: false,
+  },
+]
+
+const Cart = [
+  {
+    id: '1',
+    name: 'Some Name',
+    description: '',
+    is_active: true,
+    channels: ['default'],
+    customer_groups: ['wholesale'],
+    coupon_code: 'XYD6547JF',
+    coupon_type: 'No Coupon',
+    uses_per_customer: 2,
+    start_date: '10-10-2021',
+    end_date: '10-11-2021',
+    priority: '',
+    conditions: [],
+    action_type: 'percentage_of_price',
+    discount_amount: 0,
+    max_qty_discount: 1,
+    buy_x_qty: 5,
+    is_apply_to_shipping: true,
+    is_free_shipping: false,
+    end_other_rules: false,
+  },
+]
+
 export {
   PersonNames,
   Products,
@@ -5690,4 +5733,6 @@ export {
   Customers,
   Groups,
   Reviews,
+  Catalog,
+  Cart,
 }

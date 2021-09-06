@@ -208,6 +208,36 @@ const routes = [
         name: 'ReviewAdd',
         component: () => import('@/views/pages/review/Add.vue'),
       },
+      {
+        path: 'catalog',
+        name: 'Catalogs',
+        component: () => import('@/views/pages/catalog/Browse.vue'),
+      },
+      {
+        path: 'catalog/{id}',
+        name: 'CatalogRead',
+        component: () => import('@/views/pages/catalog/Read.vue'),
+      },
+      {
+        path: 'catalog/add',
+        name: 'CatalogAdd',
+        component: () => import('@/views/pages/catalog/Add.vue'),
+      },
+      {
+        path: 'cart',
+        name: 'Carts',
+        component: () => import('@/views/pages/cart/Browse.vue'),
+      },
+      {
+        path: 'cart/{id}',
+        name: 'CartRead',
+        component: () => import('@/views/pages/cart/Read.vue'),
+      },
+      {
+        path: 'cart/add',
+        name: 'CartAdd',
+        component: () => import('@/views/pages/cart/Add.vue'),
+      },
     ],
   },
   {

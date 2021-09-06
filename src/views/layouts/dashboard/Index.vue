@@ -153,6 +153,22 @@
           ],
         },
         {
+          name: 'Promotions',
+          icon: 'mdi mdi-shopping',
+          children: [
+            {
+              url: '/a/catalog',
+              name: 'Catalog',
+              icon: 'mdi mdi-book-open-page-variant-outline',
+            },
+            {
+              url: '/a/cart',
+              name: 'Cart',
+              icon: 'mdi mdi-cart',
+            },
+          ],
+        },
+        {
           url: '/maps',
           name: 'Maps',
           icon: 'tim-icons icon-pin',

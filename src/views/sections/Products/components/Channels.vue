@@ -7,31 +7,15 @@
       class="p-2"
       @submit.prevent="submit"
     >
-      <validation-provider>
-        <v-combobox
+      <validation-provider name="channels">
+        <v-select
           v-model="product.channel"
           :items="channels"
-          label="Channels"
           chips
+          label="Channels"
+          multiple
           outlined
-        >
-          <template v-slot:selection="data">
-            <v-chip
-              :key="JSON.stringify(data.item)"
-              v-bind="data.attrs"
-              :input-value="data.selected"
-              :disabled="data.disabled"
-              @click:close="data.parent.selectItem(data.item)"
-            >
-              <v-avatar
-                class="accent white--text"
-                left
-                v-text="data.item.slice(0, 1).toUpperCase()"
-              />
-              {{ data.item }}
-            </v-chip>
-          </template>
-        </v-combobox>
+        />
       </validation-provider>
 
       <v-btn

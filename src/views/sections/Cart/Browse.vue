@@ -20,7 +20,7 @@
     </v-card-title>
     <v-data-table
       :headers="headers"
-      :items="customers"
+      :items="carts"
       :search="search"
     >
       <!-- eslint-disable-next-line -->
@@ -45,10 +45,10 @@
 </template>
 
 <script>
-  import { Customers } from '@/core/services/data/faker'
+  import { Cart } from '@/core/services/data/faker'
 
   export default {
-    name: 'CustomerBrowse',
+    name: 'GroupBrowse',
     data () {
       return {
         search: '',
@@ -59,19 +59,19 @@
             sortable: true,
             value: 'id',
           },
-          { text: 'First Name', value: 'firstname' },
-          { text: 'Last Name', value: 'lastname' },
-          { text: 'Email', value: 'email' },
-          { text: 'Group', value: 'group' },
-          { text: 'Phone', value: 'phone' },
+          { text: 'Coupon Code', value: 'coupon_code' },
+          { text: 'Name', value: 'name' },
+          { text: 'Start', value: 'start_date' },
+          { text: 'End', value: 'end_date' },
           { text: 'Status', value: 'is_active' },
+          { text: 'Priority', value: 'priority' },
           { text: 'Actions', value: 'actions', sortable: false },
         ],
       }
     },
     computed: {
-      customers: () => {
-        const val = Customers
+      carts: () => {
+        const val = Cart
         return val
       },
     },
@@ -79,12 +79,12 @@
       read (item) {
         console.log(item)
         this.$router.push(
-          { name: 'CustomerRead', params: { id: item } },
+          { name: 'CartRead', params: { id: item } },
           onAbort => {},
         )
       },
       addnew () {
-        this.$router.push({ name: 'CustomerAdd' }, onAbort => {})
+        this.$router.push({ name: 'CartAdd' }, onAbort => {})
       },
       destroy (item) {
         console.log(item)
