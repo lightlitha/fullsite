@@ -5724,6 +5724,44 @@ const Cart = [
   },
 ]
 
+const Emailtemplates = [
+  {
+    id: '1',
+    name: 'Festive Season Sale Up To 30%',
+    status: 'active',
+    content: 'AGfd Hwdjh hfh hsdjkshd',
+  },
+]
+
+const Events = [
+  {
+    id: '1',
+    name: 'Offer Zone',
+    date: '2021-02-01',
+  },
+]
+
+const Campaigns = [
+  {
+    id: '1',
+    name: 'Campaigns',
+    subject: 'Hurry Up Grab 30% Discount',
+    status: 'Active',
+    event: 1,
+    email_template: 1,
+    channel: 1,
+    customer_group: 1,
+  },
+]
+
+const Newsletters = [
+  {
+    id: '1',
+    is_subscribed: true,
+    email: 'email@example.com',
+  },
+]
+
 export {
   PersonNames,
   Products,
@@ -5735,4 +5773,8 @@ export {
   Reviews,
   Catalog,
   Cart,
+  Emailtemplates,
+  Events,
+  Campaigns,
+  Newsletters,
 }

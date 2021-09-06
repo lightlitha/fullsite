@@ -238,6 +238,66 @@ const routes = [
         name: 'CartAdd',
         component: () => import('@/views/pages/cart/Add.vue'),
       },
+      {
+        path: 'campaign',
+        name: 'Campaigns',
+        component: () => import('@/views/pages/campaigns/Browse.vue'),
+      },
+      {
+        path: 'campaign/{id}',
+        name: 'CampaignRead',
+        component: () => import('@/views/pages/campaigns/Read.vue'),
+      },
+      {
+        path: 'campaigns/add',
+        name: 'CampaignAdd',
+        component: () => import('@/views/pages/campaigns/Add.vue'),
+      },
+      {
+        path: 'emailtemplate',
+        name: 'EmailTemplates',
+        component: () => import('@/views/pages/emailtemplates/Browse.vue'),
+      },
+      {
+        path: 'emailtemplate/{id}',
+        name: 'EmailTemplateRead',
+        component: () => import('@/views/pages/emailtemplates/Read.vue'),
+      },
+      {
+        path: 'emailtemplate/add',
+        name: 'EmailTemplateAdd',
+        component: () => import('@/views/pages/emailtemplates/Add.vue'),
+      },
+      {
+        path: 'event',
+        name: 'Events',
+        component: () => import('@/views/pages/events/Browse.vue'),
+      },
+      {
+        path: 'event/{id}',
+        name: 'EventRead',
+        component: () => import('@/views/pages/events/Read.vue'),
+      },
+      {
+        path: 'event/add',
+        name: 'EventAdd',
+        component: () => import('@/views/pages/events/Add.vue'),
+      },
+      {
+        path: 'newsletter',
+        name: 'Newsletters',
+        component: () => import('@/views/pages/newsletter/Browse.vue'),
+      },
+      {
+        path: 'newsletter/{id}',
+        name: 'NewsletterRead',
+        component: () => import('@/views/pages/newsletter/Read.vue'),
+      },
+      {
+        path: 'newsletter/add',
+        name: 'NewsletterAdd',
+        component: () => import('@/views/pages/newsletter/Add.vue'),
+      },
     ],
   },
   {

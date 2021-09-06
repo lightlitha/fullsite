@@ -169,6 +169,32 @@
           ],
         },
         {
+          name: 'Email Marketing',
+          icon: 'mdi mdi-microphone-variant',
+          children: [
+            {
+              url: '/a/campaign',
+              name: 'Campaign',
+              icon: 'mdi mdi-bulletin-board',
+            },
+            {
+              url: '/a/emailtemplate',
+              name: 'Email Template',
+              icon: 'mdi mdi-disc',
+            },
+            {
+              url: '/a/event',
+              name: 'Events',
+              icon: 'mdi mdi-calendar-star',
+            },
+            {
+              url: '/a/newsletter',
+              name: 'Newsletter',
+              icon: 'mdi mdi-email-newsletter',
+            },
+          ],
+        },
+        {
           url: '/maps',
           name: 'Maps',
           icon: 'tim-icons icon-pin',
